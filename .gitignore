@@ -177,6 +177,8 @@ cython_debug/
 
 # Ignore LinkedIn cache file
 1_foundations/me/linkedin_cache.pkl
+1_foundations/exercises/h_space/assets/linkedin.pdf
+1_foundations/exercises/h_space/assets/summary.txt
 
 # Ignore Crew engineering team output
 3_crew/engineering_team/output/
