@@ -22,7 +22,7 @@ This sprint builds the service layer that encapsulates business logic:
 
 ```bash
 # Ensure Sprint 1 is complete
-pytest tests/unit/test_settings.py tests/unit/test_schemas.py tests/unit/test_database.py
+uv run pytest tests/unit/test_settings.py tests/unit/test_schemas.py tests/unit/test_database.py
 
 # All tests should pass before starting Sprint 2
 ```
