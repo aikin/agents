@@ -822,14 +822,14 @@ Relates to Sprint 2, Task 2.4"
 
 ```bash
 # Run all Sprint 2 tests
-pytest tests/unit/test_database_service.py -v
-pytest tests/unit/test_llm_service.py -v
-pytest tests/unit/test_notification_service.py -v
-pytest tests/unit/test_file_loader.py -v
-pytest tests/unit/test_prompt_builder.py -v
+uv run pytest tests/unit/test_database_service.py -v
+uv run pytest tests/unit/test_llm_service.py -v
+uv run pytest tests/unit/test_notification_service.py -v
+uv run pytest tests/unit/test_file_loader.py -v
+uv run pytest tests/unit/test_prompt_builder.py -v
 
 # Run all tests with coverage
-pytest tests/unit/ --cov=services --cov=utils --cov-report=html
+uv run pytest tests/unit/ --cov=services --cov=utils --cov-report=html
 ```
 
 ### Deliverables
