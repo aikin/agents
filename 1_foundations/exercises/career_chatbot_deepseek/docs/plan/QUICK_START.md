@@ -21,11 +21,11 @@
 ### Step 1: Review Documentation (1 hour)
 ```bash
 # Read these files in order:
-1. adr/001-modular-architecture-with-rag-and-evaluator.md
-2. adr/002-technology-stack-selection.md
-3. adr/003-memory-management-strategy.md
-4. plan/MVP_PLAN.md (overview)
-5. plan/sprint_1_foundation.md (start here)
+1. ../adr/001-modular-architecture-with-rag-and-evaluator.md
+2. ../adr/002-technology-stack-selection.md
+3. ../adr/003-memory-management-strategy.md
+4. MVP_PLAN.md (overview)
+5. sprint_1_foundation.md (start here)
 ```
 
 ### Step 2: Set Up Environment (30 minutes)
@@ -374,9 +374,8 @@ python -c "from models.database import init_db; init_db()"
 **Solution:** Review ADR documents, check similar code in codebase, or simplify approach
 
 ### Resources
-- ADR Documents: `adr/` folder
+- ADR Documents: `../adr/` folder
 - MVP Plan: `MVP_PLAN.md`
-- Sprint Board: `SPRINT_BOARD.md`
 - Original Code: `app_deepseek.py`
 
 ---
@@ -447,9 +446,9 @@ Closes #123
 
 ---
 
-**Ready to start?** Begin with Pre-Sprint 0 in `MVP_PLAN.md`!
+**Ready to start?** Begin with Sprint 1 in `sprint_1_foundation.md`!
 
-**Questions?** Review the ADR documents in `adr/` folder.
+**Questions?** Review the ADR documents in `../adr/` folder.
 
 **Need details?** Check `MVP_PLAN.md` for complete implementation code.
 

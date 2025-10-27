@@ -150,10 +150,10 @@ Each sprint is documented in a separate file for detailed implementation:
 cd /path/to/career_chatbot_deepseek
 
 # Read these in order:
-1. adr/001-modular-architecture-with-rag-and-evaluator.md
-2. adr/002-technology-stack-selection.md
-3. adr/003-memory-management-strategy.md
-4. plan/MVP_PLAN.md (this file)
+1. ../adr/001-modular-architecture-with-rag-and-evaluator.md
+2. ../adr/002-technology-stack-selection.md
+3. ../adr/003-memory-management-strategy.md
+4. MVP_PLAN.md (this file)
 ```
 
 ### Step 2: Start Sprint 1

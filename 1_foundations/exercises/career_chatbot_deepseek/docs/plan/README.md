@@ -52,9 +52,9 @@ plan/
 cd path/to/agents/1_foundations/exercises/career_chatbot_deepseek
 
 # Read ADRs (Architectural Decision Records)
-cat adr/001-modular-architecture-with-rag-and-evaluator.md
-cat adr/002-technology-stack-selection.md
-cat adr/003-memory-management-strategy.md
+cat ../adr/001-modular-architecture-with-rag-and-evaluator.md
+cat ../adr/002-technology-stack-selection.md
+cat ../adr/003-memory-management-strategy.md
 ```
 
 ### 2. Review Planning Documents
@@ -337,10 +337,10 @@ Relates to Sprint 2, Task 2.1
 ## 📚 Additional Resources
 
 ### Architecture Documents
-- `adr/001-modular-architecture-with-rag-and-evaluator.md` - Main architecture
-- `adr/002-technology-stack-selection.md` - Tech stack choices
-- `adr/003-memory-management-strategy.md` - Memory system design
-- `adr/README.md` - ADR index
+- `../adr/001-modular-architecture-with-rag-and-evaluator.md` - Main architecture
+- `../adr/002-technology-stack-selection.md` - Tech stack choices
+- `../adr/003-memory-management-strategy.md` - Memory system design
+- `../adr/README.md` - ADR index
 
 ### Reference
 - Original monolithic code: `../app_deepseek.py`

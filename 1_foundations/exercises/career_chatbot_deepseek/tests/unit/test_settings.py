@@ -26,7 +26,7 @@ def test_settings_with_required_fields():
     """Test settings initialization with required fields."""
     settings = Settings(deepseek_api_key="test-key")
     assert settings.deepseek_api_key == "test-key"
-    assert settings.agent_name == "Your Name"
+    assert settings.agent_name == "You Name"  # from .env.test
 
 
 def test_settings_feature_flags():
@@ -41,7 +41,7 @@ def test_settings_feature_flags():
 
 def test_settings_defaults():
     settings = Settings()
-    assert settings.deepseek_api_key == "sk-your-deepseek-key-here"
+    assert settings.deepseek_api_key == "test-deepseek-key"  # from .env.test
     assert settings.primary_model == "deepseek-chat"
     assert settings.chunk_size == 1000
     assert settings.top_k_results == 3
