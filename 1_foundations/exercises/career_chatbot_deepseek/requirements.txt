@@ -4,3 +4,8 @@ gradio
 pypdf
 openai
 openai-agents
+pydantic
+pydantic-settings
+sqlalchemy
+pytest
+pytest-cov
