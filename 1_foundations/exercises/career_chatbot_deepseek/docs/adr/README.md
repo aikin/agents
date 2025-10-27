@@ -72,16 +72,45 @@ Architecture Decision Records (ADRs) document important architectural decisions 
 
 ---
 
+### [ADR 004: RAG Design and Context Engineering Strategy](./004-rag-design-and-context-engineering.md)
+**Status:** Accepted  
+**Date:** 2025-10-27
+
+**Summary:** Comprehensive RAG design following context engineering best practices, covering the evolution from naive to advanced RAG.
+
+**Key Decisions:**
+- **3-Stage Pipeline:** Retrieval → Reranking → Context Assembly
+- **Chunking:** Paragraph-based (MVP), semantic boundaries (future)
+- **Embedding:** sentence-transformers/all-MiniLM-L6-v2 (384D, fast)
+- **Token Budget:** 25% of context window reserved for RAG
+- **Evolution Path:** Naive RAG → Enhanced → Agentic → Graph RAG
+
+**Best Practices Covered:**
+- Chunking strategies (semantic, overlap, metadata)
+- Retrieval techniques (hybrid search, query expansion, MMR)
+- Context engineering (token budgeting, formatting, hierarchy)
+- Evaluation metrics (Precision@K, MRR, NDCG)
+- Challenge mitigation (irrelevance, overflow, staleness)
+
+**Context Engineering Principles:**
+- Relevance-first retrieval with threshold filtering
+- Token budget management (25% for RAG)
+- Graceful degradation with fallback strategies
+- Structured formatting for LLM consumption
+- Monitoring and telemetry for continuous improvement
+
+---
+
 ## Future ADRs
 
 ### Planned:
-- **ADR 004:** Tool System Design
-- **ADR 005:** Evaluation Criteria and Metrics
-- **ADR 006:** Deployment Strategy and CI/CD
-- **ADR 007:** Security and Privacy Considerations
-- **ADR 008:** Monitoring and Observability
-- **ADR 009:** Testing Strategy and Coverage
-- **ADR 010:** Performance Optimization Techniques
+- **ADR 005:** Tool System Design and Function Calling
+- **ADR 006:** Evaluation Criteria and Metrics
+- **ADR 007:** Deployment Strategy and CI/CD
+- **ADR 008:** Security and Privacy Considerations
+- **ADR 009:** Monitoring and Observability
+- **ADR 010:** Testing Strategy and Coverage
+- **ADR 011:** Performance Optimization Techniques
 
 ---
 

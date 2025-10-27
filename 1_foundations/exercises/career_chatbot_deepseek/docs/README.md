@@ -37,6 +37,16 @@ The `adr/` folder contains detailed architectural decisions and design documents
   - Memory tech stack selection
   - Implementation strategy for MVP
 
+### RAG & Context Engineering
+- **[004-rag-design-and-context-engineering.md](adr/004-rag-design-and-context-engineering.md)**
+  - RAG overview in context engineering context
+  - 3-stage pipeline: Retrieval → Reranking → Context Assembly
+  - Best practices (chunking, embedding, retrieval, evaluation)
+  - Challenges & solutions (irrelevance, overflow, staleness)
+  - Evolution path: Naive → Enhanced → Agentic → Graph RAG
+  - Token budgeting and context hierarchy
+  - Monitoring and evaluation metrics
+
 ### Navigation
 - **[README.md](adr/README.md)** - ADR index and decision log
 
