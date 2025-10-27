@@ -12,7 +12,6 @@ build/
 # Environment
 .env
 .env.local
-!.env.test  # Allow .env.test for testing
 
 # Package Management
 # Keep uv.lock and requirements.txt in version control for reproducibility
