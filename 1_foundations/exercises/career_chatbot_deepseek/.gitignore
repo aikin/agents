@@ -4,16 +4,20 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
-venv/
-.venv/
 *.egg-info/
 dist/
 build/
+.venv/
 
 # Environment
 .env
 .env.local
+!.env.test  # Allow .env.test for testing
+
+# Package Management
+# Keep uv.lock and requirements.txt in version control for reproducibility
+# uv.lock - for uv users (exact versions)
+# requirements.txt - for pip users (compatibility)
 
 # IDEs
 .vscode/
