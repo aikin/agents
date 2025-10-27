@@ -199,9 +199,9 @@ Both files are committed to version control for reproducibility.
 
 ### Running Sprints
 
-This project follows a sprint-based implementation plan. See `plan/` folder for detailed sprint guides:
+This project follows a sprint-based implementation plan. See `docs/plan/` folder for detailed sprint guides:
 
-1. **Sprint 1** - Foundation & Data Models
+1. **Sprint 1** - Foundation & Data Models ✅
 2. **Sprint 2** - Services Layer
 3. **Sprint 3** - RAG & Tools
 4. **Sprint 4** - Agents & Memory
@@ -218,15 +218,23 @@ This project follows a sprint-based implementation plan. See `plan/` folder for 
 5. Add secrets in Space settings (API keys)
 6. Push to deploy
 
-See `plan/sprint_5_integration.md` for detailed deployment instructions.
+See `docs/plan/sprint_5_integration.md` for detailed deployment instructions.
 
-## Architecture Decision Records
+## Documentation
 
-See `adr/` folder for architectural decisions:
+All project documentation is organized in the `docs/` folder:
 
-- `001-modular-architecture-with-rag-and-evaluator.md` - Main architecture
-- `002-technology-stack-selection.md` - Tech stack choices
-- `003-memory-management-strategy.md` - Memory system design
+### 📋 Implementation Plans (`docs/plan/`)
+- **MVP_PLAN.md** - High-level MVP overview and sprint structure
+- **QUICK_START.md** - Step-by-step setup and workflow guide
+- **sprint_1_foundation.md** through **sprint_5_integration.md** - Detailed sprint tasks
+
+### 🏗️ Architecture Decision Records (`docs/adr/`)
+- **001-modular-architecture-with-rag-and-evaluator.md** - Main architecture with diagrams
+- **002-technology-stack-selection.md** - Tech stack choices and comparisons
+- **003-memory-management-strategy.md** - Memory system design
+
+See `docs/README.md` for complete documentation navigation.
 
 ## License
 
@@ -234,7 +242,7 @@ MIT
 
 ## Contributing
 
-This is a learning project following the implementation plan in `plan/MVP_PLAN.md`.
+This is a learning project following the implementation plan in `docs/plan/MVP_PLAN.md`.
 
 ## Acknowledgments
 
