@@ -47,8 +47,12 @@ distro==1.9.0
     # via
     #   openai
     #   posthog
+dnspython==2.8.0
+    # via email-validator
 durationpy==0.10
     # via kubernetes
+email-validator==2.3.0
+    # via career-chatbot-deepseek (pyproject.toml)
 fastapi==0.120.0
     # via gradio
 ffmpy==0.6.4
@@ -138,6 +142,7 @@ humanfriendly==10.0
 idna==3.11
     # via
     #   anyio
+    #   email-validator
     #   httpx
     #   requests
 importlib-metadata==8.7.0

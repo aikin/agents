@@ -1,7 +1,17 @@
-from datetime import datetime
+"""Pydantic models for data validation.
+
+These models ensure data integrity throughout the application
+by providing runtime validation and type safety.
+"""
+
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field, StrictBool
+
+
+def current_utc_time() -> datetime:
+    return datetime.now(timezone.utc)
 
 
 class Evaluation(BaseModel):
@@ -19,7 +29,7 @@ class ContactRecord(BaseModel):
     email: EmailStr
     name: str = "Not provided"
     notes: str = "Not provided"
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=current_utc_time)
 
 
 class QARecord(BaseModel):
@@ -27,15 +37,15 @@ class QARecord(BaseModel):
     answer: str
     context_used: Optional[List[str]] = None
     evaluation_score: Optional[int] = Field(None, ge=1, le=10)
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=current_utc_time)
 
 
 class ToolCall(BaseModel):
     tool_name: str
     arguments: Dict[str, object]
     result: Dict[str, object]
-    success: bool
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    success: StrictBool
+    timestamp: datetime = Field(default_factory=current_utc_time)
 
 
 class ConversationCreate(BaseModel):
