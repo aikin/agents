@@ -622,15 +622,11 @@ def evaluate_retrieval(test_queries: List[dict]):
 
 ## References
 
-### Academic Papers
-- **RAG (2020):** Lewis et al., "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
-- **Dense Retrieval (2020):** Karpukhin et al., "Dense Passage Retrieval for Open-Domain Question Answering"
-- **ColBERT (2020):** Khattab & Zaharia, "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction"
-
 ### Industry Resources
-- **LangChain RAG Guide:** https://python.langchain.com/docs/use_cases/question_answering/
+- **LangChain RAG Guide:** https://docs.langchain.com/oss/python/langchain/rag
 - **Pinecone RAG Handbook:** https://www.pinecone.io/learn/retrieval-augmented-generation/
-- **Weaviate RAG Best Practices:** https://weaviate.io/blog/rag-best-practices
+- **LangChain × Manus: context engineering for AI agents:** https://www.youtube.com/watch?v=6_BcCthVvb8
+- **LangChain: Context Engineering Best Practices:** https://docs.langchain.com/oss/python/langchain/context-engineering#best-practices
 
 ### Related ADRs
 - [ADR 001: Modular Architecture](001-modular-architecture-with-rag-and-evaluator.md)

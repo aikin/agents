@@ -1015,7 +1015,7 @@ class ChatbotController:
 ### Agentic AI Patterns
 - [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)
 - [OpenAI: Function Calling Guide](https://platform.openai.com/docs/guides/function-calling)
-- [LangChain: Agent Patterns](https://python.langchain.com/docs/modules/agents/)
+- [LangChain: Multi-agent](https://docs.langchain.com/oss/python/langchain/multi-agent)
 
 ### Clean Code
 - Martin, Robert C. "Clean Code: A Handbook of Agile Software Craftsmanship"
@@ -1024,7 +1024,7 @@ class ChatbotController:
 
 ### RAG Best Practices
 - [Pinecone: RAG Guide](https://www.pinecone.io/learn/retrieval-augmented-generation/)
-- [LangChain: RAG Tutorial](https://python.langchain.com/docs/use_cases/question_answering/)
+- [LangChain: RAG Tutorial](https://docs.langchain.com/oss/python/langchain/rag)
 
 ### Related ADRs
 - [ADR 002: Technology Stack Selection](./002-technology-stack-selection.md)
