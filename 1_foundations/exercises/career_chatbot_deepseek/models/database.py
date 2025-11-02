@@ -56,7 +56,8 @@ class UnknownQuestion(Base):
   id = Column(Integer, primary_key=True, autoincrement=True)
   question = Column(Text, nullable=False)
   count = Column(Integer, default=1)
-  timestamp = Column(DateTime, default=lambda: datetime.now(timezone.utc), index=True)
+  first_asked = Column(DateTime, default=lambda: datetime.now(timezone.utc), index=True)
+  last_asked = Column(DateTime, default=lambda: datetime.now(timezone.utc), index=True)
 
   def __repr__(self):
     return f"<UnknownQuestion(id={self.id}, question={self.question})>"
