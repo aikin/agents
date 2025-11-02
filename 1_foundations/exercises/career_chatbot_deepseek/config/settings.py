@@ -55,14 +55,17 @@ class Settings(BaseSettings):
     timeout_seconds: int = 30
 
 
-# Global settings instance - will be initialized when .env is available
+# Global settings instance
+# This will raise ValidationError at import time if required config is missing,
+# making configuration issues immediately clear rather than causing confusing
+# AttributeErrors later when trying to access settings properties.
+settings = Settings()
+
+
 def get_settings() -> Settings:
-    return Settings()
-
-
-# For backward compatibility and convenience
-try:
-    settings = Settings()
-except Exception:
-    # Settings will be created when needed (e.g., in tests with explicit values)
-    settings = None  # type: ignore 
+    """Get the global settings instance.
+    
+    This function exists for dependency injection patterns and testing,
+    where you might want to override settings dynamically.
+    """
+    return settings 
