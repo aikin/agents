@@ -4,18 +4,19 @@ Provides a clean interface for all database operations,
 following the Repository pattern.
 """
 
-from sqlalchemy import create_engine, desc, func
-from sqlalchemy.orm import sessionmaker, Session
-from typing import List, Optional, Dict, Any
-from contextlib import contextmanager
 import json
+from contextlib import contextmanager
+from typing import Any
 
-from models.database import Base, Conversation, Contact, UnknownQuestion
+from sqlalchemy import create_engine, desc, func
+from sqlalchemy.orm import Session, sessionmaker
+
 from config.settings import settings
+from models.database import Base, Contact, Conversation, UnknownQuestion
 
 
 class DatabaseService:
-  def __init__(self, db_url: Optional[str] = None):
+  def __init__(self, db_url: str | None = None):
     self.db_url = db_url or f"sqlite:///{settings.db_path}"
     self.engine = create_engine(self.db_url, echo=False)
     Base.metadata.create_all(self.engine)
@@ -34,16 +35,16 @@ class DatabaseService:
       session.close()
 
   def save_conversation(
-    self, 
-    user_message: str, 
-    agent_response: str, 
-    evaluation_score: Optional[float] = None, 
-    context_used: Optional[List[str]] = None) -> int:
+    self,
+    user_message: str,
+    agent_response: str,
+    evaluation_score: float | None = None,
+    context_used: list[str] | None = None) -> int:
 
     conversation = Conversation(
-      user_message=user_message, 
-      agent_response=agent_response, 
-      evaluation_score=evaluation_score, 
+      user_message=user_message,
+      agent_response=agent_response,
+      evaluation_score=evaluation_score,
       context_used=json.dumps(context_used) if context_used else None
     )
 
@@ -56,8 +57,8 @@ class DatabaseService:
   def save_contact(
     self,
     email: str,
-    name: Optional[str] = None,
-    notes: Optional[str] = None
+    name: str | None = None,
+    notes: str | None = None
   ) -> int:
     contact = Contact(
       email=email,
@@ -80,7 +81,7 @@ class DatabaseService:
         new_q = UnknownQuestion(question=question)
         session.add(new_q)
 
-  def get_analytics(self) -> Dict[str, Any]:
+  def get_analytics(self) -> dict[str, Any]:
     with self.get_session() as session:
       total_conversations = session.query(Conversation).count()
       total_contacts = session.query(Contact).count()
@@ -103,7 +104,7 @@ class DatabaseService:
         ]
       }
 
-  def get_recent_conversations(self, limit: int = 10) -> List[Dict]:
+  def get_recent_conversations(self, limit: int = 10) -> list[dict]:
     with self.get_session() as session:
       convs = session.query(Conversation).order_by(
         desc(Conversation.timestamp)
