@@ -178,7 +178,7 @@ cython_debug/
 # Ignore LinkedIn cache file
 1_foundations/me/linkedin_cache.pkl
 1_foundations/exercises/career_chatbot_deepseek/knowledge_base/linkedin.pdf
-1_foundations/exercises/career_chatbot_deepseek/knowledge_base/summary.txt
+1_foundations/exercises/career_chatbot_deepseek/knowledge_base/summary.md
 
 # Ignore Crew engineering team output
 3_crew/engineering_team/output/

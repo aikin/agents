@@ -12,6 +12,7 @@ build/
 # Environment
 .env
 .env.local
+.env.test
 
 # Package Management
 # Keep uv.lock and requirements.txt in version control for reproducibility
@@ -29,6 +30,10 @@ data/
 *.db
 *.sqlite
 chroma_db/
+
+# Knowledge Base
+knowledge_base/linkedin.pdf
+knowledge_base/summary.md
 
 # Logs
 *.log
