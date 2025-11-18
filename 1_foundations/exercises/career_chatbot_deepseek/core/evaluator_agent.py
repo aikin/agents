@@ -21,7 +21,6 @@ class EvaluatorAgent:
     """Evaluate response quality.
     Args:
       question: User's question
-  
       answer: Agent's answer
     Returns:
       Evaluation object with acceptable, feedback, score
