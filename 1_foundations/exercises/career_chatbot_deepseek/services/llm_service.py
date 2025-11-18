@@ -5,7 +5,7 @@ abstracting away API details.
 """
 
 
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from openai import OpenAI
 
@@ -14,7 +14,7 @@ from config.settings import settings
 
 class LLMService:
 
-  def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None):
+  def __init__(self, api_key: str | None = None, model: str | None = None):
    self.client = OpenAI(
     api_key=api_key or settings.deepseek_api_key,
     base_url="https://api.deepseek.com/v1"
@@ -23,10 +23,10 @@ class LLMService:
 
   def chat_completion(
     self,
-    messages: List[Dict[str, str]],
-    tools: Optional[List[Dict]] = None,
+    messages: list[dict[str, str]],
+    tools: list[dict] | None = None,
     temperature: float = 0.7,
-    max_tokens: Optional[int] = None) -> Any:
+    max_tokens: int | None = None) -> Any:
 
     kwargs = {
       "model": self.model,
